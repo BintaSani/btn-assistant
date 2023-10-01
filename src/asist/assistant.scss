@@ -1,0 +1,54 @@
+.cont{
+    .button-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid red;
+    height: 10vh;
+
+    .btn{
+        margin-bottom: 30vh;
+        width: 10%;
+        height: 5vh;
+        border: none;
+        background-color: navy;
+        color: white;
+    }
+    .description {
+        
+        display: none;
+        }
+        
+    &:hover .description {
+        display: block;
+        margin-top: 6vh;
+        height: 4vh;
+        position: relative;
+        margin-left: -23%;
+        border: 1px solid navy;
+        z-index: 1;
+    }
+    
+}
+@keyframes move-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styling for the GIF */
+  #walk-gif {
+    width: 10%; /* Adjust the width and height as needed */
+    height: 10vh;
+    margin: 20px auto;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 3;
+    position: absolute
+    
+  }
+}
