@@ -52,7 +52,7 @@ const getDescription = (button) => {
 
 const Model = ({ button }) => {
   // Load and display your 3D model (e.g., walking.fbx)
-  const { nodes, materials } = useGLTF('../src/assets/Start Walking.fbx'); // Replace with the correct path
+  const { nodes, materials } = useGLTF('../src/assets/Start Walking.fbx'); 
 
   // Calculate the model position based on the active button
   let modelPosition = [0, -10, 0];
