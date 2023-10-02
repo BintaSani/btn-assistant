@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useGLTF } from '@react-three/drei';
+import { useFBX } from '@react-three/drei';
 
 const ButtonAssistant = () => {
   const [activeButton, setActiveButton] = useState(null);
@@ -51,8 +51,8 @@ const getDescription = (button) => {
 };
 
 const Model = ({ button }) => {
-  // Load and display your 3D model (e.g., walking.fbx)
-  const { nodes, materials } = useGLTF('../src/assets/Start Walking.fbx'); 
+  // Load and display your 3D model (e.g., walking.fbx) using useFbx
+  const model = useFBX('/public/assets/Start Walking.fbx');
 
   // Calculate the model position based on the active button
   let modelPosition = [0, -10, 0];
@@ -76,7 +76,7 @@ const Model = ({ button }) => {
 
   return (
     <group position={modelPosition}>
-      <primitive object={nodes.modelName} material={materials.materialName} />
+      {model} {/* Render the loaded model */}
     </group>
   );
 };

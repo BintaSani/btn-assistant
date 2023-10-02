@@ -1,6 +1,6 @@
 
 import './App.css';
-import ButtonAssistant from './asist/virtualasistant';
+import ButtonAssistant from './asist/asistant';
 
 const App =()=>{
   return(

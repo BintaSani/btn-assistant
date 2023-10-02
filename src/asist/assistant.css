@@ -1,0 +1,72 @@
+.cont {
+  text-align: center;
+  padding: 20px;
+  
+  height: 100vh;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 10vh;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin: 20px;
+  
+}
+
+.button-wrapper {
+  position: relative;
+  
+  height: 10vh;;
+}
+
+.btn {
+  background-color: #007acc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+
+  &.active {
+    background-color: #005d9b;
+  }
+}
+
+.description {
+  display: none;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+
+  &.visible {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.gif {
+  width: 100px;
+  margin-top: 20vh;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease;
+  
+  &.animate {
+    transform: translate(0, -100px); /* Adjust the Y-offset as needed */
+  }
+}
+
